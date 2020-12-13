@@ -1,16 +1,17 @@
-const { default: calcCOCOMO } = require("./calcCOCOMO");
-const { default: calcFPA } = require("./calcFPA");
-const { default: load2Form } = require("./load2Form");
+const {calcCOCOMO} = require("./calcCOCOMO");
+const {calcFPA} = require("./calcFPA");
+const {load2Form} = require("./load2Form");
 
-var promise = new Promise(function (resolve, reject) {
 
-    let checkBox = document.querySelector('id="kt_tab_pane_11_1"');
+var onStartCalc = new function() {
+
+    let isFPAMethod = document.querySelector('id="kt_tab_pane_11_1"');
     let result;
-    if (checkBox.getAttribute("class") == "tab-pane fade show active")
-        result = calcFPA();
-    else
-        result = calcCOCOMO();
+    if (isFPAMethod.getAttribute("class") == "tab-pane fade show active")
+        result = calcFPA;
+    else {
+        result = calcCOCOMO;
+    }   
+    load2Form(result);
 
-});
-
-promise.then(load2Form(result));
+};

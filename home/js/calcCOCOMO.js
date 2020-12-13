@@ -8,12 +8,12 @@ let inputsEM = document.querySelectorAll('[data-ifpugCOCOMO_EM="true"]');
 
 let arraySF = new Array(inputsSF.length);
 for(let index = 0; index < inputsSF.length; index++) {
-    arraySF[index] = inputsSF[0].Value;
+    arraySF[index] = inputsSF[index].Value;
 }
 
 let arrayEM = new Array(inputsEM.length);
 for(let index = 0; index < inputsEM.length; index++) {
-    arrayEM[index] = inputsEM[0].Value;
+    arrayEM[index] = inputsEM[index].Value;
 }
 
 let result = calc_dataObject.calcCOCOMO(arraySF,arrayEM);
