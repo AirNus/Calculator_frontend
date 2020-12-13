@@ -104,3 +104,5 @@ class CalcData {
     ]);
   }
 }
+
+export default CalcData;
