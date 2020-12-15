@@ -1,6 +1,6 @@
-const {calcCOCOMO} = require("./calcCOCOMO");
-const {calcFPA} = require("./calcFPA");
-const {load2Form} = require("./load2Form");
+import { calcCOCOMO } from "./calcCOCOMO";
+import { calcFPA } from "./calcFPA";
+import { load2Form } from "./load2Form";
 
 
 var onStartCalc = new function() {
