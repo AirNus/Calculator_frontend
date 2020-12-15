@@ -1,4 +1,4 @@
-function load2Form(array) {
+function load2Form(map) {
     
     // ["VAF", VAF], ["UFP", UFP], ["DFP", DFP], ["SLOC", SLOC], ["KLOC", KLOC]
     // ["PM", PM], ["TDEV", TDEV]    
@@ -8,7 +8,11 @@ function load2Form(array) {
     let resultLabels = document.querySelectorAll(paramsArray);
 
     for(let index = 0; index < resultLabels.length; index++) {
-        document.getElementById(paramsArray[index]).value = array[paramsArray[index]];
+        paramsArray.forEach( function(item,i,paramsArray) {
+            if(item == resultLabels[index].id) {
+                resultLabels.value = map[item];
+            }
+        });    
     }
 };
 
