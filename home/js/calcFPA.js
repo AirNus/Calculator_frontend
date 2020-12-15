@@ -5,7 +5,7 @@ function calcFPA() {
     let language = document.getElementById("languageFPA").nodeValue;
 
     let arrayFPA = new Array(inputsFPA.length);
-    for(let index = 0; index < inputsFPA.length; index ++) {
+    for (let index = 0; index < inputsFPA.length; index ++) {
         arrayFPA[index] = inputsFPA[index].nodeValue;
     }
 

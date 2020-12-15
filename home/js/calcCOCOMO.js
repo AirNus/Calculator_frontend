@@ -7,12 +7,12 @@ let inputsSF = document.querySelectorAll('[data-ifpugCOCOMO_SF="true"]');
 let inputsEM = document.querySelectorAll('[data-ifpugCOCOMO_EM="true"]');
 
 let arraySF = new Array(inputsSF.length);
-for(let index = 0; index < inputsSF.length; index++) {
+for (let index = 0; index < inputsSF.length; index++) {
     arraySF[index] = inputsSF[index].Value;
 }
 
 let arrayEM = new Array(inputsEM.length);
-for(let index = 0; index < inputsEM.length; index++) {
+for (let index = 0; index < inputsEM.length; index++) {
     arrayEM[index] = inputsEM[index].Value;
 }
 

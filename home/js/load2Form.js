@@ -7,7 +7,7 @@ function load2Form(map) {
 
     let resultLabels = document.querySelectorAll(paramsArray);
 
-    for(let index = 0; index < resultLabels.length; index++) {
+    for (let index = 0; index < resultLabels.length; index++) {
         paramsArray.forEach( function(item,i,paramsArray) {
             if(item == resultLabels[index].id) {
                 resultLabels.value = map[item];
