@@ -1,16 +1,17 @@
-function calcFPA(){
+function calcFPA() {
 
-let Calc_dataObject;
-let arrayFPA = new Array();
+    let Calc_dataObject = new CalcData();
+    let inputsFPA = document.querySelectorAll('[data-ifpugFPA="true"]');
+    let language = document.getElementById("languageFPA").nodeValue;
 
+    let arrayFPA = new Array(inputsFPA.length);
+    for(let index = 0; index < inputsFPA.length; index ++) {
+        arrayFPA[index] = inputsFPA[index].nodeValue;
+    }
 
-for(let i = 0; i < document.getElementsByClassName("").length; i= i+1) {
-    arrayFPA[i] = document.getElementById(SF).value;
-}
+    let result = Calc_dataObject.calcFPA(arrayFPA,language);
 
-let result = Calc_dataObject.calcFPA(arrayFPA);
-
-return result;
+    return result;
 };
 
 export default calcFPA;
