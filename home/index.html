@@ -129,13 +129,13 @@
                                                 <!--end::Bullet-->
                                                 <!--begin::Checkbox-->
                                                 <label class="checkbox checkbox-lg checkbox-light-success checkbox-inline flex-shrink-0 m-0 mx-4">
-														<input type="checkbox" name="select" value="1">
+														<input id="VAF_checkbox" type="checkbox" name="select" value="1">
 														<span></span>
 													</label>
                                                 <!--end::Checkbox-->
                                                 <!--begin::Text-->
                                                 <div class="d-flex flex-column flex-grow-1">
-                                                    <a href="#" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">VAF</a>
+                                                    <a href="#" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">VAF – Фактор выравнивания</a>
                                                     <span  id="VAF" class="text-muted font-weight-bold">Set result here</span>
                                                 </div>
                                                 <!--end::Text-->
@@ -149,13 +149,13 @@
                                                 <!--end::Bullet-->
                                                 <!--begin::Checkbox-->
                                                 <label class="checkbox checkbox-lg checkbox-light-primary checkbox-inline flex-shrink-0 m-0 mx-4">
-														<input type="checkbox" value="1">
+														<input id="UFP_checkbox" type="checkbox" value="1">
 														<span></span>
 													</label>
                                                 <!--end::Checkbox-->
                                                 <!--begin::Text-->
                                                 <div class="d-flex flex-column flex-grow-1">
-                                                    <a href="#" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">UFP</a>
+                                                    <a href="#" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">UFP – Количество не выровненных функциональных точек </a>
                                                     <span id="UFP" class="text-muted font-weight-bold">Set result here</span>
                                                 </div>
                                                 <!--end::Text-->
@@ -169,13 +169,13 @@
                                                 <!--end::Bullet-->
                                                 <!--begin::Checkbox-->
                                                 <label class="checkbox checkbox-lg checkbox-light-warning checkbox-inline flex-shrink-0 m-0 mx-4">
-														<input type="checkbox" value="1">
+														<input id="DFP_checkbox" type="checkbox" value="1">
 														<span></span>
 													</label>
                                                 <!--end::Checkbox-->
                                                 <!--begin::Text-->
                                                 <div class="d-flex flex-column flex-grow-1">
-                                                    <a href="#" class="text-dark-75 text-hover-primary font-size-sm font-weight-bold font-size-lg mb-1">DFP</a>
+                                                    <a href="#" class="text-dark-75 text-hover-primary font-size-sm font-weight-bold font-size-lg mb-1">DFP – Проект разработки продукта </a>
                                                     <span id="DFP" class="text-muted font-weight-bold">Set result here</span>
                                                 </div>
                                                 <!--end::Text-->
@@ -189,14 +189,14 @@
                                                 <!--end::Bullet-->
                                                 <!--begin::Checkbox-->
                                                 <label class="checkbox checkbox-lg checkbox-light-info checkbox-inline flex-shrink-0 m-0 mx-4">
-														<input type="checkbox" value="1">
+														<input id="SLOC/KLOC_checkbox" type="checkbox" value="1">
 														<span></span>
 													</label>
                                                 <!--end::Checkbox-->
                                                 <!--begin::Text-->
                                                 <div class="d-flex flex-column flex-grow-1">
-                                                    <a href="#" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">SLOC/KLOC - Source Lines of Code </a>
-                                                    <span id="SLOC" class="text-muted font-weight-bold">Set result here</span>
+                                                    <a href="#" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">SLOC/KLOC – Количество строк кода</a>
+                                                    <span id="SLOC/KLOC" class="text-muted font-weight-bold">Set result here</span>
                                                 </div>
                                                 <!--end::Text-->
                                                 <!--end::Dropdown-->
@@ -209,13 +209,13 @@
                                                 <!--end::Bullet-->
                                                 <!--begin::Checkbox-->
                                                 <label class="checkbox checkbox-lg checkbox-light-danger checkbox-inline flex-shrink-0 m-0 mx-4">
-														<input type="checkbox" value="1">
+														<input id="PM_checkbox" type="checkbox" value="1">
 														<span></span>
 													</label>
                                                 <!--end::Checkbox:-->
                                                 <!--begin::Title-->
                                                 <div class="d-flex flex-column flex-grow-1">
-                                                    <a href="#" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">PM</a>
+                                                    <a href="#" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">PM – Суммарная трудоемкость проекта</a>
                                                     <span id="PM" class="text-muted font-weight-bold">Set result here</span>
                                                 </div>
                                                 <!--end::Text-->
@@ -228,13 +228,13 @@
                                                 <!--end::Bullet-->
                                                 <!--begin::Checkbox-->
                                                 <label class="checkbox checkbox-lg checkbox-light-danger checkbox-inline flex-shrink-0 m-0 mx-4">
-														<input type="checkbox" value="1">
+														<input id="TDEV_checkbox" type="checkbox" value="1">
 														<span></span>
 													</label>
                                                 <!--end::Checkbox:-->
                                                 <!--begin::Title-->
                                                 <div class="d-flex flex-column flex-grow-1">
-                                                    <a href="#" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">TDEV</a>
+                                                    <a href="#" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">TDEV – Длительность проекта</a>
                                                     <span id="TDEV" class="text-muted font-weight-bold">Set result here</span>
                                                 </div>
                                                 <!--end::Text-->
@@ -278,43 +278,43 @@
                                                                 <div class="row">
                                                                     <div class="col-lg-6 col-md-6 col-sm-12" style="padding-right: 30px;">
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="Enter your range (1-5)">
+                                                                            <input type="number" value="3" class="form-control" name="num" placeholder="Enter your range (1-5)">
                                                                             <span class="form-text text-muted">Обмен данными</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
+                                                                            <input type="number" value="3" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
                                                                             <span class="form-text text-muted">Распределенная обработка</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
+                                                                            <input type="number" value="3" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
                                                                             <span class="form-text text-muted">Производительность (время отклика)</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
+                                                                            <input type="number" value="3" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
                                                                             <span class="form-text text-muted">Ограничения аппаратные</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
+                                                                            <input type="number" value="3" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
                                                                             <span class="form-text text-muted">Транзакционная нагрузка</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
+                                                                            <input type="number" value="3" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
                                                                             <span class="form-text text-muted">Взаимодействие с пользователем</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
+                                                                            <input type="number" value="3" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
                                                                             <span class="form-text text-muted">Эргономика</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
@@ -322,43 +322,43 @@
                                                                     </div>
                                                                     <div class="col-lg-6 col-md-6 col-sm-12">
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
+                                                                            <input type="number" value="3"class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
                                                                             <span class="form-text text-muted">Интенсивность изменения данных</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
+                                                                            <input type="number" value="3"class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
                                                                             <span class="form-text text-muted">Сложность обработки</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
+                                                                            <input type="number" value="3"class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
                                                                             <span class="form-text text-muted">Повторное использование</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
+                                                                            <input type="number" value="3"class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
                                                                             <span class="form-text text-muted">Удобство инсталляции</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
+                                                                            <input type="number" value="3"class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
                                                                             <span class="form-text text-muted">Удобство администрирования</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
+                                                                            <input type="number" value="3"class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
                                                                             <span class="form-text text-muted">Портируемость</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
+                                                                            <input type="number" value="3"class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugFPA="true">
                                                                             <span class="form-text text-muted">Гибкость</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
@@ -371,7 +371,12 @@
                                                                     <div class="col-4">
                                                                     </div>
                                                                     <div class="col-7">
-                                                                        <button type="reset" class="btn btn-success mr-2" style="background: #0bb783">Calculate</button>
+                                                                        <select id="language" class="btn btn-success mr-2" style="background: #0bb783">
+                                                                            <option value="Assembly" selected="selected">Assembly</option>
+                                                                            <option value="Java">Java</option>
+                                                                            <option value="C++">C++</option>
+                                                                        </select>
+                                                                        <button type="reset" class="btn btn-success mr-2" onclick="onStartCalc('FPA')" style="background: #0bb783">Calculate</button>
                                                                         <button type="reset" class="btn btn-secondary">Fill test data</button>
                                                                     </div>
                                                                 </div>
@@ -389,37 +394,37 @@
                                                                 <div class="row">
                                                                     <div class="col-lg-6 col-md-6 col-sm-12" style="padding-right: 30px;">
                                                                         <div class="form-group row">
-                                                                            <input type="number" id ="PREC" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_SF="true">
+                                                                            <input type="number" value="3"id ="PREC" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_SF="true">
                                                                             <span class="form-text text-muted">PREC</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" id ="FLEX" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_SF="true">
+                                                                            <input type="number" value="3"id ="FLEX" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_SF="true">
                                                                             <span class="form-text text-muted">FLEX</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" id ="RESL" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_SF="true">
+                                                                            <input type="number" value="3"id ="RESL" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_SF="true">
                                                                             <span class="form-text text-muted">RESL</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" id ="TEAM" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_SF="true">
+                                                                            <input type="number" value="3"id ="TEAM" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_SF="true">
                                                                             <span class="form-text text-muted">TEAM</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" id ="PMAT" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_SF="true">
+                                                                            <input type="number" value="3"id ="PMAT" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_SF="true">
                                                                             <span class="form-text text-muted">PMAT</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="Enter your range (1-5)">
+                                                                            <input type="number" value="3"class="form-control" name="num" placeholder="Enter your range (1-5)">
                                                                             <span class="form-text text-muted">Name of field</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
@@ -433,43 +438,43 @@
                                                                     </div>
                                                                     <div class="col-lg-6 col-md-6 col-sm-12">
                                                                         <div class="form-group row">
-                                                                            <input type="number" id="PERS" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_EM="true">
+                                                                            <input type="number" value="3"id="PERS" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_EM="true">
                                                                             <span class="form-text text-muted">PERS</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" id="RCPX" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_EM="true">
+                                                                            <input type="number" value="3"id="RCPX" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_EM="true">
                                                                             <span class="form-text text-muted">RCPX</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" id="RUSE" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_EM="true">
+                                                                            <input type="number" value="3"id="RUSE" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_EM="true">
                                                                             <span class="form-text text-muted">RUSE</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" id="PDIF" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_EM="true">
+                                                                            <input type="number" value="3"id="PDIF" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_EM="true">
                                                                             <span class="form-text text-muted">PDIF</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" id="PREX" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_EM="true">
+                                                                            <input type="number" value="3"id="PREX" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_EM="true">
                                                                             <span class="form-text text-muted">PREX</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" id="FCIL" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_EM="true">
+                                                                            <input type="number" value="3"id="FCIL" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_EM="true">
                                                                             <span class="form-text text-muted">FCIL</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" id="SCED" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_EM="true"> 
+                                                                            <input type="number" value="3"id="SCED" class="form-control" name="num" placeholder="Enter your range (1-5)" data-ifpugCOCOMO_EM="true"> 
                                                                             <span class="form-text text-muted">SCED</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
@@ -482,7 +487,7 @@
                                                                     <div class="col-4">
                                                                     </div>
                                                                     <div class="col-7">
-                                                                        <button type="reset" onclick="onStartCalc()" class="btn btn-success mr-2" style="background: #0bb783">Calculate</button>
+                                                                        <button type="reset" onclick="onStartCalc('COCOMO')" class="btn btn-success mr-2" style="background: #0bb783">Calculate</button>
                                                                         <button type="reset" class="btn btn-secondary">Fill test data</button>
                                                                     </div>
                                                                 </div>
