@@ -14,7 +14,7 @@ function load2Form(map) {
                 SLOCKLOC = valueMap[1];
             }
             if (valueMap[0] == "KLOC") {
-                SLOCKLOC = SLOCKLOC / valueMap[1];
+                SLOCKLOC = SLOCKLOC + "/" + valueMap[1];
             }
         }
         map[map.length] = ["SLOC/KLOC", SLOCKLOC];
@@ -23,7 +23,7 @@ function load2Form(map) {
         for (let indexMap = 0; indexMap < map.length; indexMap++) {
             let valueMap = map[indexMap];
             if (paramsArray[index] == valueMap[0]) {
-                document.getElementById(paramsArray[index]).textContent = valueMap[1].toFixed(1);
+                document.getElementById(paramsArray[index]).textContent = valueMap[1];
                 document.getElementById(paramsArray[index] + '_checkbox').checked = true;
             }
         }

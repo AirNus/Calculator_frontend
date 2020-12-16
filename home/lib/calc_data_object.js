@@ -76,13 +76,13 @@ class CalcData {
   }
 
   //PM function
-  getPM(SLOC, E, EM) {
+  getPM(SLOC, E, EM) {      
       return 2.94 * Math.pow(Math.round(SLOC / 1000), E) * EM;
-  }
+    }
 
   //TDEV function
   getTDEV(PM, SF) {
-      return 3.67 * Math.pow(PM, 0.28 + 0.02 * 0.01 * SF);
+      return 3.67 * Math.pow(PM, 0.28 + 0.02 * 0.01 * SF);      
   }
 
   /* END - COCOMO II METHOD */
@@ -101,14 +101,14 @@ class CalcData {
       ]);
   }
 
-  calcCOCOMO2(array1, array2) {
+  calcCOCOMO2(array1, array2, SLOC) {
       let SF = this.getSF(array1);
       let E = this.getE(SF);
       let EM = this.getEM(array2);
-      let PM = this.getPM(2, E, EM);
+      let PM = this.getPM(SLOC, E, EM);
       let TDEV = this.getTDEV(PM, SF);
       this.resultCOCOMO = ([
-          ["SF", SF], ["E", E], ["EM", EM], ["PM", PM], ["TDEV", TDEV]
+          ["SF", SF], ["E", E], ["EM", EM], ["PM", PM.toFixed(1)], ["TDEV", TDEV.toFixed(1)]
       ]);
   }
 }
