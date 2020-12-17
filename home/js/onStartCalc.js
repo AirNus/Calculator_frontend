@@ -1,6 +1,9 @@
 
 function onStartCalc(nameMethod) {
 
+    let isAllEnter = true;
+    let result = undefined;
+
     let paramsArray = ["VAF", "UFP", "DFP", "SLOC/KLOC", "PM", "TDEV"];
     for (let index = 0; index < paramsArray.length; index++) {
 
@@ -10,12 +13,43 @@ function onStartCalc(nameMethod) {
     }
 
     if (nameMethod == 'FPA') {
-        result = calcFPA2();
+        let inputsFPA = document.querySelectorAll('[data-ifpugFPA="true"]');
+        let language = document.getElementById("language").value;
+
+        inputsFPA.forEach(function (item, i, arr) {
+            if (item.value == "") {
+                isAllEnter = false;
+            }
+        });
+        if (isAllEnter) {
+            result = calcFPA2(inputsFPA, language);
+        }
     }
     else {
-        result = calcCOCOMO();
+        let inputsSF = document.querySelectorAll('[data-ifpugCOCOMO_SF="true"]');
+        let inputsEM = document.querySelectorAll('[data-ifpugCOCOMO_EM="true"]');
+        let SLOC = document.getElementById('SLOC').value;
+
+        inputsSF.forEach(function (item, i, arr) {
+            if (item.value == "") {
+                isAllEnter = false;
+            }
+        });
+
+        inputsEM.forEach(function (item, i, arr) {
+            if (item.value == "") {
+                isAllEnter = false;
+            }
+        });
+        if (isAllEnter) {
+            result = calcCOCOMO(inputsSF, inputsEM, SLOC);
+        }
     }
 
-    load2Form(result);
-
+    try {
+        load2Form(result);
+    }
+    catch (err) {
+        alert("Заполните все поля!")
+    }
 };

@@ -97,7 +97,7 @@ class CalcData {
       let SLOC = this.getSLOC(language, DFP);
       let KLOC = Math.round(SLOC / 1000);
       this.resultFPA = ([
-          ["VAF", VAF], ["UFP", UFP], ["AFP", AFP], ["DFP", DFP], ["SLOC", SLOC], ["KLOC", KLOC]
+          ["VAF", VAF.toFixed(1)], ["UFP", UFP.toFixed(1)], ["AFP", AFP.toFixed(1)], ["DFP", DFP.toFixed(1)], ["SLOC", SLOC.toFixed(1)], ["KLOC", KLOC.toFixed(1)]
       ]);
   }
 

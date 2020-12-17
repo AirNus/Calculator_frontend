@@ -1,8 +1,6 @@
-function calcFPA2() {
+function calcFPA2(inputsFPA,language) {
 
-    let Calc_dataObject = new CalcData();
-    let inputsFPA = document.querySelectorAll('[data-ifpugFPA="true"]');
-    let language = document.getElementById("language").value;
+    let Calc_dataObject = new CalcData();  
 
     let arrayFPA = new Array(inputsFPA.length);
     for (let index = 0; index < inputsFPA.length; index++) {
