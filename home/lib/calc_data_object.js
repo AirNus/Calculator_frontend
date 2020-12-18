@@ -88,10 +88,9 @@ class CalcData {
   /* END - COCOMO II METHOD */
 
   // MAIN BODY
-  calcFPA(array, language) {
+  calcFPA(array, language, UFP) {
+      UFP = 14; // ИСПРАВИТЬ!!
       let VAF = this.getVAF(array);
-      //What is UFP???
-      let UFP = 14;
       let AFP = this.getAFP(UFP, VAF);
       let DFP = this.getDFP(UFP, 0, VAF);
       let SLOC = this.getSLOC(language, DFP);

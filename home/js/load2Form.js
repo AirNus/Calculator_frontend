@@ -12,6 +12,7 @@ function load2Form(map) {
             let valueMap = map[indexMap];
             if (valueMap[0] == "SLOC") {
                 SLOCKLOC = valueMap[1];
+                document.getElementById('SLOC').value = valueMap[1];
             }
             if (valueMap[0] == "KLOC") {
                 SLOCKLOC = SLOCKLOC + "/" + valueMap[1];
