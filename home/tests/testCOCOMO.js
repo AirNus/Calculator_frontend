@@ -37,10 +37,4 @@ function testCOCOMO() {
     alert("InDataEM: " + arrayOutEM);
     alert("SLOC/KLOC: " + slocVar);
     alert("OutData: " + result);
-
-    return result;
-};
-
-function between(min, max) {
-    return Math.floor(Math.random() * (max - min) + min)
 };

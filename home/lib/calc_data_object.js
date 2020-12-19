@@ -3,6 +3,7 @@ class CalcData {
   constructor() {
       this.resultFPA = new Map();
       this.resultCOCOMO = new Map();
+      this.resultUFP = new Map();
   }
 
 
@@ -88,8 +89,16 @@ class CalcData {
   /* END - COCOMO II METHOD */
 
   // MAIN BODY
+  calcUFP(array) {
+      let UFP = 0;
+      for (let index = 0; index < array.length; index++) {
+          UFP += array[index];
+      }
+      this.resultUFP = ([
+          ["UFP", UFP]
+        ]);
+  }
   calcFPA(array, language, UFP) {
-      UFP = 14; // ИСПРАВИТЬ!!
       let VAF = this.getVAF(array);
       let AFP = this.getAFP(UFP, VAF);
       let DFP = this.getDFP(UFP, 0, VAF);

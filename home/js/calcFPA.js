@@ -1,4 +1,4 @@
-function calcFPA2(inputsFPA,language) {
+function calcFPA2(inputsFPA,language, UFP) {
 
     let Calc_dataObject = new CalcData();  
 
@@ -7,7 +7,7 @@ function calcFPA2(inputsFPA,language) {
         arrayFPA[index] = inputsFPA[index].value * 1;
     }
 
-    Calc_dataObject.calcFPA(arrayFPA, language);
+    Calc_dataObject.calcFPA(arrayFPA, language, UFP);
 
     let result = Calc_dataObject.resultFPA;
 

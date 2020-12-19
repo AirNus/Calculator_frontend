@@ -16,16 +16,10 @@ function testFPA() {
         arrayOut += arrayFPA[index] + " ";
     }
 
-    Calc_dataObject.calcFPA(arrayFPA, "Assembly");
+    Calc_dataObject.calcFPA(arrayFPA, "Assembly", 11);
 
     let result = Calc_dataObject.resultFPA;
 
     alert("InData: " + arrayOut);
     alert("OutData: " + result);
-
-    return result;
-};
-
-function between(min, max) {
-    return Math.floor(Math.random() * (max - min) + min)
 };

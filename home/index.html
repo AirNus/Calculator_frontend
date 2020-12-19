@@ -17,10 +17,11 @@
     <link href="css/plugins.bundle.css" rel="stylesheet" type="text/css">
     <link href="css/prismjs.bundle.css" rel="stylesheet" type="text/css">
     <link href="css/style.bundle.css" rel="stylesheet" type="text/css">
+	
     <!--end::Global Theme Styles-->
     <!--begin::Layout Themes(used by all pages)-->
     <!--end::Layout Themes-->
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">	
     
 </head>
 <!--end::Head-->
@@ -86,11 +87,11 @@
                                 <div class="topbar-item">
                                     <div class="btn btn-icon btn-hover-transparent-white w-auto d-flex align-items-center btn-lg px-2" id="kt_quick_user_toggle">
                                         <div class="d-flex flex-column text-right pr-3">
-                                            <span class="text-white opacity-90 font-weight-bold font-size-sm d-none d-md-inline">Миленчики – ♥</span>
-                                            <span class="text-white font-weight-bolder font-size-sm d-none d-md-inline">Совместно с Stankin team</span>
+                                            <span class="text-white opacity-90 font-weight-bold font-size-sm d-none d-md-inline">Миленчики & Practice Team </span>
+                                            <span class="text-white font-weight-bolder font-size-sm d-none d-md-inline">Created with Love in 2020</span>
                                         </div>
                                         <span class="symbol symbol-35">
-                                            <span class="symbol-label font-size-h5 font-weight-bold text-white bg-white-o-30">S</span>
+                                            <span class="symbol-label font-size-h5 font-weight-bold text-white bg-white-o-30">💓</span>
                                         </span>
                                     </div>
                                 </div>
@@ -242,6 +243,18 @@
                                             <!--end::Item-->
                                         </div>
                                         <!--end::Body-->
+										<div class="card-footer">
+													<div class="row">
+																	<div class="col-lg-2"></div>
+																	<div class="col-lg-8" style="margin-left: 20px">
+															<div class=" mr-2">
+															<button type="button" class="btn btn-light-primary font-weight-bolder" onclick="Download()" aria-haspopup="true" aria-expanded="false">
+															<i class="la la-file-text-o"></i> Получить результаты</button>
+															<div id="downlLink"></div>
+														</div>
+																	</div>
+													</div>
+												</div>
                                     </div>
                                     <!--end:List Widget 4-->
                                 </div>
@@ -257,13 +270,13 @@
                                             <div class="card-toolbar">
                                                 <ul class="nav nav-pills nav-pills-sm nav-dark-75">
                                                     <li class="nav-item">
-                                                        <a class="nav-link py-2 px-4 active" data-toggle="tab" href="#kt_tab_pane_11_4">UFP</a>
+                                                        <a id="tabUFP" class="nav-link py-2 px-4 active" data-toggle="tab" href="#kt_tab_pane_11_4">UFP</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link py-2 px-4" data-toggle="tab" href="#kt_tab_pane_11_1">IFPUG FPA</a>
+                                                        <a id="tabFPA" class="nav-link py-2 px-4" data-toggle="tab" href="#kt_tab_pane_11_1">IFPUG FPA</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link py-2 px-4" data-toggle="tab" href="#kt_tab_pane_11_3">COCOMO II</a>
+                                                        <a id="tabCOCOMO" class="nav-link py-2 px-4" data-toggle="tab" href="#kt_tab_pane_11_3">COCOMO II</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -281,109 +294,110 @@
                                                                 <div class="row">
                                                                     <div class="col-lg-6 col-md-6 col-sm-12" style="padding-right: 30px;">
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="От 0 до 5">
-                                                                            <span class="form-text text-muted">Обмен данными</span>
+																			<label>Обмен данными</label>
+                                                                            <input type="number" value="1" class="form-control" name="Обмен данными" placeholder="От 0 до 5" data-ifpugFPA="true">
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="От 0 до 5" data-ifpugFPA="true">
-                                                                            <span class="form-text text-muted">Распределенная обработка</span>
+																			<label>Распределенная обработка</label>
+                                                                            <input type="number" value="1" class="form-control" name="Распределенная обработка" placeholder="От 0 до 5" data-ifpugFPA="true">
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="От 0 до 5" data-ifpugFPA="true">
-                                                                            <span class="form-text text-muted">Производительность (время отклика)</span>
+																			<label>Производительность (время отклика)</label>
+                                                                            <input type="number" value="1" class="form-control" name="Производительность (время отклика)" placeholder="От 0 до 5" data-ifpugFPA="true">
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="От 0 до 5" data-ifpugFPA="true">
-                                                                            <span class="form-text text-muted">Ограничения аппаратные</span>
+																			<label>Ограничения аппаратные</label>
+                                                                            <input type="number" value="1" class="form-control" name="Ограничения аппаратные" placeholder="От 0 до 5" data-ifpugFPA="true">
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="От 0 до 5" data-ifpugFPA="true">
-                                                                            <span class="form-text text-muted">Транзакционная нагрузка</span>
+																			<label>Транзакционная нагрузка</label>
+                                                                            <input type="number" value="1" class="form-control" name="Транзакционная нагрузка" placeholder="От 0 до 5" data-ifpugFPA="true">
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="От 0 до 5" data-ifpugFPA="true">
-                                                                            <span class="form-text text-muted">Взаимодействие с пользователем</span>
+																			<label>Взаимодействие с пользователем</label>
+                                                                            <input type="number" value="1" class="form-control" name="Взаимодействие с пользователем" placeholder="От 0 до 5" data-ifpugFPA="true">
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="От 0 до 5" data-ifpugFPA="true">
-                                                                            <span class="form-text text-muted">Эргономика</span>
+																			<label>Эргономика</label>
+                                                                            <input type="number" value="1" class="form-control" name="Эргономика" placeholder="От 0 до 5" data-ifpugFPA="true">
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-lg-6 col-md-6 col-sm-12">
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="От 0 до 5" data-ifpugFPA="true">
-                                                                            <span class="form-text text-muted">Интенсивность изменения данных</span>
+																			<label>Интенсивность изменения данных</label>
+                                                                            <input type="number" value="1" class="form-control" name="Интенсивность изменения данных" placeholder="От 0 до 5" data-ifpugFPA="true">
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="От 0 до 5" data-ifpugFPA="true">
-                                                                            <span class="form-text text-muted">Сложность обработки</span>
+																			<label>Сложность обработки</label>
+                                                                            <input type="number" value="1" class="form-control" name="Сложность обработки" placeholder="От 0 до 5" data-ifpugFPA="true">
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="От 0 до 5" data-ifpugFPA="true">
-                                                                            <span class="form-text text-muted">Повторное использование</span>
+																			<label>Повторное использование</label>
+                                                                            <input type="number" value="1" class="form-control" name="Повторное использование" placeholder="От 0 до 5" data-ifpugFPA="true">
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="От 0 до 5" data-ifpugFPA="true">
-                                                                            <span class="form-text text-muted">Удобство инсталляции</span>
+																			<label>Удобство инсталляции</label>
+                                                                            <input type="number" value="1" class="form-control" name="Удобство инсталляции" placeholder="От 0 до 5" data-ifpugFPA="true">
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="От 0 до 5" data-ifpugFPA="true">
-                                                                            <span class="form-text text-muted">Удобство администрирования</span>
+																			<label>Удобство администрирования</label>
+                                                                            <input type="number" value="1" class="form-control" name="Удобство администрирования" placeholder="От 0 до 5" data-ifpugFPA="true">
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="От 0 до 5" data-ifpugFPA="true">
-                                                                            <span class="form-text text-muted">Портируемость</span>
+																			<label>Портируемость</label>
+                                                                            <input type="number" value="1" class="form-control" name="Портируемость" placeholder="От 0 до 5" data-ifpugFPA="true">
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" class="form-control" name="num" placeholder="От 0 до 5" data-ifpugFPA="true">
-                                                                            <span class="form-text text-muted">Гибкость</span>
+																			<label>Гибкость</label>
+                                                                            <input type="number" value="1" class="form-control" name="Гибкость" placeholder="От 0 до 5" data-ifpugFPA="true">
+                                                                            <span class="form-text text-muted"></span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                     </div>
+																	
                                                                 </div>
+																
                                                             </div>
-                                                            <div class="card-footer">
-                                                                <div class="row">
-                                                                    <div class="col-4">
-                                                                    </div>
-                                                                    <div class="col-7">
-                                                                        <select id="language" class="btn btn-success mr-2" style="background: #0bb783">
+															<div class="d-flex justify-content-between border-top mt-5 pt-10 mb-10">
+															<div class="mr-2">
+																<button type="reset" class="btn btn-secondary font-weight-bolder text-uppercase px-9 py-4">Очистить данные</button>
+															</div>
+															<div>
+																<select id="language" name="Язык программирования" class="btn btn-light-primary font-weight-bolder mr-2 text-uppercase px-9 py-4">
                                                                             <option value="Assembly" selected="selected">Assembly</option>
                                                                             <option value="Java">Java</option>
                                                                             <option value="C++">C++</option>
                                                                         </select>
-                                                                        <button type="button" class="btn btn-success mr-2" onclick="onStartCalc('FPA')" style="background: #0bb783">Рассчитать</button>
-                                                                        <button type="reset" class="btn btn-secondary">Очистить данные</button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                                        <button type="button" class="btn btn-primary font-weight-bolder text-uppercase px-9 py-4" onclick="onStartCalc('FPA')">Рассчитать</button>
+															</div>
+														</div>
                                                         </form>
                                                     </div>
                                                 </div>
@@ -397,140 +411,192 @@
                                                                 <div class="row">
                                                                     <div class="col-lg-6 col-md-6 col-sm-12" style="padding-right: 30px;">
                                                                         <div class="form-group row">
-                                                                            <select id="PREC" class="form-control" name="num"  data-ifpugCOCOMO_SF="true">
-                                                                                <option value="1.24" selected="selected" >1.24 - Низкая сложность</option>
+																		<label>Опыт аналогичных разработок</label>
+                                                                            <select id="PREC" class="form-control" name="Опыт аналогичных разработок" data-ifpugCOCOMO_SF="true">
+                                                                                <option value="1.24" selected="selected">1.24 - Низкая сложность</option>
                                                                                 <option value="2.48">2.48</option>
                                                                                 <option value="3.72">3.72</option>
                                                                                 <option value="4.96">4.96</option>
                                                                                 <option value="6.20">6.20 - Высокая сложность</option>
                                                                             </select>
-                                                                            <span class="form-text text-muted">Опыт аналогичных разработок</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <select id="FLEX" class="form-control" name="num" data-ifpugCOCOMO_SF="true">
+																		<label>Гибкость процесса</label>
+                                                                            <select id="FLEX" class="form-control" name="Гибкость процесса" data-ifpugCOCOMO_SF="true">
                                                                                 <option value="1.01" selected="selected">1.01 - Низкая сложность</option>
                                                                                 <option value="2.03">2.03</option>
                                                                                 <option value="3.04">3.04</option>
                                                                                 <option value="4.05">4.05</option>
                                                                                 <option value="5.07">5.07 - Высокая сложность</option>
                                                                             </select>
-                                                                            <span class="form-text text-muted">Гибкость процесса</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <select id="RESL" class="form-control" name="num" data-ifpugCOCOMO_SF="true">
+																		<label>Разрешение рисков</label>
+                                                                            <select id="RESL" class="form-control" name="Разрешение рисков" data-ifpugCOCOMO_SF="true">
                                                                                 <option value="1.41" selected="selected">1.41 - Низкая сложность</option>
                                                                                 <option value="2.83">2.83</option>
                                                                                 <option value="4.24">4.24</option>
                                                                                 <option value="5.65">5.65</option>
                                                                                 <option value="7.07">7.07 - Высокая сложность</option>
                                                                             </select>
-                                                                            <span class="form-text text-muted">Разрешение рисков</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <select id="TEAM" class="form-control" name="num" data-ifpugCOCOMO_SF="true">
+																		<label>Сработанность команды</label>
+                                                                            <select id="TEAM" class="form-control" name="Сработанность команды" data-ifpugCOCOMO_SF="true">
                                                                                 <option value="1.10" selected="selected">1.10 - Низкая сложность</option>
                                                                                 <option value="2.19">2.19</option>
                                                                                 <option value="3.29">3.29</option>
                                                                                 <option value="4.38">4.38</option>
                                                                                 <option value="5.48">5.48 - Высокая сложность</option>
                                                                             </select>
-                                                                            <span class="form-text text-muted">Сработанность команды</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <select id="PMAT" class="form-control" name="num" data-ifpugCOCOMO_SF="true">
+																		<label>Зрелость процессов</label>
+                                                                            <select id="PMAT" class="form-control" name="Зрелость процессов" data-ifpugCOCOMO_SF="true">
                                                                                 <option value="1.56" selected="selected">1.56 - Низкая сложность</option>
                                                                                 <option value="3.12">3.12</option>
                                                                                 <option value="4.68">4.68</option>
                                                                                 <option value="6.24">6.24</option>
                                                                                 <option value="7.80">7.80 - Высокая сложность</option>
                                                                             </select>
-                                                                            <span class="form-text text-muted">Зрелость процессов</span>
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" id="SLOC" class="form-control" name="num"  >                                                                            
-                                                                            <span class="form-text text-muted">SLOC - количество строк кода</span>
+																		<label>SLOC - количество строк кода</label>
+                                                                            <input type="number" id="SLOC" class="form-control" name="SLOC - количество строк кода">
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-lg-6 col-md-6 col-sm-12">
                                                                         <div class="form-group row">
-                                                                            <input type="number" id="PERS" class="form-control" name="num" placeholder="От 0.5 до 2.12" data-ifpugCOCOMO_EM="true">
-                                                                            <span class="form-text text-muted">Квалификация персонала</span>
+																		<label>Квалификация персонала</label>
+                                                                            <input type="number" id="PERS" class="form-control" name="Квалификация персонала" placeholder="От 0.5 до 2.12" data-ifpugCOCOMO_EM="true">
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" id="RCPX" class="form-control" name="num" placeholder="От 0.49 до 2.72" data-ifpugCOCOMO_EM="true">
-                                                                            <span class="form-text text-muted">Надежность продукта</span>
+																		<label>Надежность продукта</label>
+                                                                            <input type="number" id="RCPX" class="form-control" name="Надежность продукта" placeholder="От 0.49 до 2.72" data-ifpugCOCOMO_EM="true">
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" id="RUSE" class="form-control" name="num" placeholder="От 0.95 до 1.24" data-ifpugCOCOMO_EM="true">
-                                                                            <span class="form-text text-muted">Повторное использование</span>
+																		<label>Повторное использование</label>
+                                                                            <input type="number" id="RUSE" class="form-control" name="Повторное использование" placeholder="От 0.95 до 1.24" data-ifpugCOCOMO_EM="true">
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" id="PDIF" class="form-control" name="num" placeholder="От 0.87 до 2.61" data-ifpugCOCOMO_EM="true">
-                                                                            <span class="form-text text-muted">Сложность платформы разработки</span>
+																		<label>Сложность платформы разработки</label>
+                                                                            <input type="number" id="PDIF" class="form-control" name="Сложность платформы разработки" placeholder="От 0.87 до 2.61" data-ifpugCOCOMO_EM="true">
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" id="PREX" class="form-control" name="num" placeholder="От 0.62 до 1.59" data-ifpugCOCOMO_EM="true">
-                                                                            <span class="form-text text-muted">Опыт персонала</span>
+																		<label>Опыт персонала</label>
+                                                                            <input type="number" id="PREX" class="form-control" name="Опыт персонала" placeholder="От 0.62 до 1.59" data-ifpugCOCOMO_EM="true">
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" id="FCIL" class="form-control" name="num" placeholder="От 0.62 до 1.43" data-ifpugCOCOMO_EM="true">
-                                                                            <span class="form-text text-muted">Оборудование коммуникаций</span>
+																		<label>Оборудование коммуникаций</label>
+                                                                            <input type="number" id="FCIL" class="form-control" name="Оборудование коммуникаций" placeholder="От 0.62 до 1.43" data-ifpugCOCOMO_EM="true">
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <input type="number" id="SCED" class="form-control" name="num" placeholder="От 1.0 до 1.43" data-ifpugCOCOMO_EM="true"> 
-                                                                            <span class="form-text text-muted">Сжатие расписания</span>
+																		<label>Сжатие расписания</label>
+                                                                            <input type="number" id="SCED" class="form-control" name="Сжатие расписания" placeholder="От 1.0 до 1.43" data-ifpugCOCOMO_EM="true">
                                                                             <div class="fv-plugins-message-container"></div>
 
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="card-footer">
-                                                                <div class="row">
-                                                                    <div class="col-4">
-                                                                    </div>
-                                                                    <div class="col-7">
-                                                                        <button type="button" onclick="onStartCalc('COCOMO')" class="btn btn-success mr-2" style="background: #0bb783">Рассчитать</button>
-                                                                        <button type="reset" class="btn btn-secondary">Очистить данные</button>
-                                                                        <!--<button type="reset" onclick="RunTests()" class="btn btn-success mr-2" style="background: #0bb783">Tests</button>-->
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+															<div class="d-flex justify-content-between border-top mt-5 pt-10 mb-10">
+															<div class="mr-2">
+																<button type="reset" class="btn btn-secondary font-weight-bolder text-uppercase px-9 py-4">Очистить данные</button>
+															</div>
+															<div>
+																		<button type="button" onclick="RunTests()" class="btn btn-light-primary font-weight-bolder text-uppercase px-9 py-4 mr-4">Запустить тесты</button>
+                                                                        <button type="button" class="btn btn-primary font-weight-bolder text-uppercase px-9 py-4" onclick="onStartCalc('COCOMO')">Рассчитать</button>
+															</div>
+														</div>
                                                         </form>
                                                     </div>
                                                     <!--end::Table-->
                                                 </div>
-                                                <!--end::Tap pane-->
+                                                <!--end::Tap pane 4 -->
                                                 <div class="tab-pane fade show active" id="kt_tab_pane_11_4" role="tabpanel" aria-labelledby="kt_tab_pane_11_4">
                                                     <div class="card card-custom">
-
-                                                        <form>
-                                                           
-                                                        </form>
+														<div class="col-xl-12 col-xxl-12" style="padding: 0; margin-top: 15px">
+														<!--begin::Wizard Form-->
+													<form class="form fv-plugins-bootstrap fv-plugins-framework" id="kt_form">
+														<!--begin::Wizard Step 1-->
+														<div data-wizard-type="step-content" data-wizard-state="current" id="tableUFP">
+															<div class="row">
+																<div class="col-xl-2">
+																	<!--begin::Input-->
+																	<div class="form-group fv-plugins-icon-container">
+																		<label>Номер формы</label>
+																		<input type="text" class="form-control form-control-solid form-control-lg" name="numberForm" placeholder="А0-А4" value="A0">
+																		<span class="form-text text-muted">Например, А0</span>
+																	<div class="fv-plugins-message-container"></div></div>
+																	<!--end::Input-->
+																</div>
+																<div class="col-xl-4">
+																	<!--begin::Input-->
+																	<div class="form-group fv-plugins-icon-container">
+																<label>Наименование</label>
+																<input type="text" class="form-control form-control-solid form-control-lg" name="nameForm" placeholder="Введите название" value="Управлять пользователями">
+																<span class="form-text text-muted">Например, управлять пользователями</span>
+																	<!--end::Input-->
+																</div></div>
+																<div class="col-xl-3">
+																	<!--begin::Input-->
+																	<div class="form-group fv-plugins-icon-container">
+																		<label>Количество форм</label>
+																		<input type="text" class="form-control form-control-solid form-control-lg" name="countForm" placeholder="Значение" value="4">
+																		<span class="form-text text-muted">Например, 2</span>
+																	<div class="fv-plugins-message-container"></div></div>
+																	<!--end::Input-->
+																</div>
+																<div class="col-xl-3">
+																	<!--begin::Input-->
+																	<div class="form-group fv-plugins-icon-container">
+																		<label>Количество данных</label>
+																		<input type="text" class="form-control form-control-solid form-control-lg" name="countData" placeholder="Значение" value="4">
+																		<span class="form-text text-muted">Например, 5</span>
+																	<div class="fv-plugins-message-container"></div></div>
+																	<!--end::Input-->
+																</div>
+                                                            </div>
+                                                            
+														</div>
+														<!--end::Wizard Step 1-->												
+														<!--begin::Wizard Actions-->
+														<div class="d-flex justify-content-between border-top mt-5 pt-10">
+															<div class="mr-2">
+																<button type="button" onclick="addRowUFP()" class="btn btn-light-primary font-weight-bolder text-uppercase px-9 py-4" data-wizard-type="action-prev">Добавить строку</button>
+															</div>
+															<div>
+																<button type="button" onclick="onStartCalc('UFP')" class="btn btn-primary font-weight-bolder text-uppercase px-9 py-4" data-wizard-type="action-next">Далее</button>
+															</div>
+														</div>
+														<!--end::Wizard Actions-->
+													</form>
+													<!--end::Wizard Form-->
+												</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -610,10 +676,17 @@
     <script src="js/widgets.js"></script>
     <!--end::Page Scripts-->
     <script src="./lib/calc_data_object.js"></script>
+    <script src="js/addRowUFP.js"></script>
+    <script src="js/calcUFP.js"></script>
     <script src="js/load2Form.js"></script>
     <script src="js/calcCOCOMO.js"></script>
     <script src="js/calcFPA.js"></script>
     <script src="js/onStartCalc.js"></script>
+    <script src="js/Download.js"></script>
+
+    <script src="./tests/random.js"></script>
+    <script src="./tests/testCalcFPA.js"></script>
+    <script src="./tests/testCalcCOCOMO.js"></script>
     <script src="./tests/testFPA.js"></script>
     <script src="./tests/testCOCOMO.js"></script>
     <script src="./tests/RunTests.js"></script>
